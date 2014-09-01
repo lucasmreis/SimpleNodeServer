@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var obj = require('./object');
+var obj = require('./lib/object');
 
 app.get('/', function (req, res) {
   res.json(obj);
