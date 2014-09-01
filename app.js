@@ -4,11 +4,11 @@ var app = express();
 var obj = require('./lib/object');
 
 app.get('/', function (req, res) {
-  res.json(obj);
+  res.json(obj());
 });
 
 app.get('/:name', function (req, res) {
-  res.send('Oi ' + req.params.name + '.');
+  res.json(obj(req.params.name));
 });
 
 var server = app.listen(3000, function() {
